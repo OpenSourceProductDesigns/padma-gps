@@ -1,0 +1,52 @@
+# ---- KiCad ----
+# Backups and autosave
+*-backups/
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-bak
+*~
+_autosave-*
+\#auto_saved_files\#
+~*.lck
+*.lck
+
+# Local / per-user settings
+*.kicad_prl
+fp-info-cache
+*-cache.lib
+*.sym-cache
+
+# Generated outputs (publish these as GitHub Release assets instead)
+hardware/production/**
+!hardware/production/README.md
+*.gbr
+*.gbl
+*.gtl
+*.gbs
+*.gts
+*.gbo
+*.gto
+*.gbp
+*.gtp
+*.gm1
+*.drl
+*.zip
+*-drl_map.*
+
+# ---- Firmware (Zephyr / nRF Connect SDK) ----
+build/
+build_*/
+*.hex
+*.bin
+*.elf
+*.map
+.west/
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
