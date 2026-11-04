@@ -59,9 +59,9 @@ stateDiagram-v2
 | ID | Use case | Trigger | Priority |
 |---|---|---|---|
 | UC-01 | **Manual SOS:** wearer deliberately raises an alarm | Button / press pattern | M |
-| UC-02 | **Automatic SOS, fall:** wearer falls or is pushed down | IMU | C (was M; IMU now optional, see OQ-16) |
+| UC-02 | **Automatic SOS, fall:** wearer falls or is pushed down | IMU | M (IMU kept, OQ-16) |
 | UC-03 | **Automatic SOS, struggle:** wearer is grabbed or dragged | IMU | C |
-| UC-04 | **Automatic SOS, voice:** wearer screams or says a keyword (e.g. "bachao" / "help") | Microphone + on-device speech / sound recognition | **M** (primary auto trigger) |
+| UC-04 | **Automatic SOS, voice:** wearer screams or says their personal code phrase | Microphone + on-device speech / sound recognition with voice match | **M** (primary auto trigger) |
 | UC-05 | **Cancel a false alarm** during a **silent** countdown | Wearer cancel gesture | M |
 | UC-06 | **Duress cancel:** device looks cancelled but still calls | Alternate cancel gesture | C |
 | UC-07 | **Location to responders:** first fix plus repeated updates while she is moved | SOS active | M |

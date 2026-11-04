@@ -25,7 +25,7 @@ Status: `draft`
 
 | ID | Requirement | Pri |
 |---|---|---|
-| NFR-020 | Trigger to 112 contact initiated: ≤ T_cancel + 15 s (TBD). | M |
+| NFR-020 | Trigger to 112 call initiated: ≤ 25 s for automatic triggers (T_cancel 10 s + 15 s); ≤ 15 s for manual SOS. | M |
 | NFR-021 | Location accuracy outdoors: ≤ 10 m (CEP50) in the open, ≤ 25 m in urban canyons. | S |
 | NFR-022 | Warm-start TTFF ≤ 5 s; cold start with assistance ≤ 30 s. | S |
 | NFR-023 | **False positive rate** of automatic detection reaching 112 (after the cancel window): TBD (target < 1 per wearer per year). | M |
