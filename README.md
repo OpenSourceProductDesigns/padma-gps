@@ -19,6 +19,7 @@ hardware/
   production/     Gerbers, BOM, pick-and-place (published as Releases)
   enclosure/      Enclosure CAD (future)
 firmware/         Device firmware
+tools/            Developer helper scripts (e.g. datasheet PDF → Markdown)
 docs/             Requirements, architecture, bring-up guides
 ```
 
@@ -27,7 +28,7 @@ docs/             Requirements, architecture, bring-up guides
 | Part | License |
 |---|---|
 | Hardware (`hardware/`) | [CERN-OHL-S-2.0](LICENSE-HARDWARE) |
-| Firmware (`firmware/`) | [GPL-3.0](LICENSE-FIRMWARE) |
+| Firmware (`firmware/`) and tools (`tools/`) | [GPL-3.0](LICENSE-FIRMWARE) |
 | Documentation (`docs/`, README files) | [CC-BY-SA-4.0](LICENSE-DOCS) |
 
 The **"Padma" name and logo are not covered by these licenses**. See [TRADEMARK.md](TRADEMARK.md).

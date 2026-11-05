@@ -21,6 +21,10 @@ fp-info-cache
 *-cache.lib
 *.sym-cache
 
+# Datasheets 
+hardware/datasheets/**
+!hardware/datasheets/README.md
+
 # Generated outputs (publish these as GitHub Release assets instead)
 hardware/production/**
 !hardware/production/README.md

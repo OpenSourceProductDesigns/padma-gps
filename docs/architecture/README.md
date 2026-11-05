@@ -12,6 +12,7 @@ requirements → system block diagram → power budget → subsystem design → 
 |---|---|
 | [01-system-block-diagram.md](01-system-block-diagram.md) | Blocks, interfaces, power rails, SOS timeline, architecture decisions `AD-xx`, candidate parts |
 | [02-power-budget.md](02-power-budget.md) | Standby and SOS current estimates, battery life by modem idle strategy, SOS reserve, peak current |
+| [03-lte-module-selection.md](03-lte-module-selection.md) | LTE Cat 1 bis module shortlist for India: VoLTE, PCM audio, size, power, open vendor questions |
 
 ## Conventions
 
