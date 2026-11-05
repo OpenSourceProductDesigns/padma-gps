@@ -1,4 +1,4 @@
-# Padma GPS: Architecture
+# Padma SOS: Architecture
 
 Status: `draft`
 

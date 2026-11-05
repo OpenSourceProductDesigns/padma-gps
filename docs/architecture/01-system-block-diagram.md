@@ -159,7 +159,7 @@ sequenceDiagram
     MOD->>ERSS: emergency call
     MOD-->>MCU: connected
     MCU->>HAP: one short pulse
-    MCU->>MOD: PCM: "Automated distress call from a Padma GPS device. Location …"
+    MCU->>MOD: PCM: "Automated distress call from a Padma SOS device. Location …"
     MCU->>MOD: SMS to 112 with location (FR-025)
     loop every T_track
         MCU->>MOD: PCM: open mic audio

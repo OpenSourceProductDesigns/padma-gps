@@ -1,6 +1,6 @@
-# Padma GPS: Requirements
+# Padma SOS: Requirements
 
-This folder takes Padma GPS from the problem down to testable requirements. Architecture (`docs/architecture/`) and the hardware/firmware design are derived from it.
+This folder takes Padma SOS from the problem down to testable requirements. Architecture (`docs/architecture/`) and the hardware/firmware design are derived from it.
 
 ```
 problem → users → use cases → functional + non-functional requirements → architecture → HW / FW

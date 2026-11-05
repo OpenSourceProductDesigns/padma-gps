@@ -1,6 +1,6 @@
-# Padma GPS
+# Padma SOS
 
-**Padma GPS** is an ultra-compact, open-source GPS tracker designed as a base platform for **women's personal safety devices**: SOS alerts, live location sharing, and wearable or keychain form factors.
+**Padma SOS** is an ultra-compact, open-source SOS device designed as a base platform for **women's personal safety devices**: SOS alerts, live location sharing, and wearable or keychain form factors.
 
 Everything is open: schematics, PCB layout, BOM, firmware, enclosure, and documentation. Anyone can study, build, and improve it.
 
@@ -8,7 +8,7 @@ Part of [OpenSourceProductDesigns](https://github.com/OpenSourceProductDesigns).
 
 > **Status:** 🚧 Early design, not yet functional.
 
-> ⚠️ **Safety disclaimer:** Padma GPS is an open hardware project and is **not a certified safety or emergency device**. Do not rely on it as your only means of getting help. See [RESPONSIBLE_USE.md](RESPONSIBLE_USE.md).
+> ⚠️ **Safety disclaimer:** Padma SOS is an open hardware project and is **not a certified safety or emergency device**. Do not rely on it as your only means of getting help. See [RESPONSIBLE_USE.md](RESPONSIBLE_USE.md).
 
 ## Repository layout
 

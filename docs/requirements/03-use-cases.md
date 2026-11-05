@@ -85,7 +85,7 @@ stateDiagram-v2
   3. Confidence ≥ threshold: **silent countdown** (haptic, if fitted) for T_cancel seconds.
   4. No cancel arrives: the GNSS fix is taken (or the last known one).
   5. The modem dials **112 over VoLTE**.
-  6. On answer, the device injects an **announcement into the call**, e.g. *"Automated distress call from a Padma GPS device. Location: …"*, then switches to **open mic**.
+  6. On answer, the device injects an **announcement into the call**, e.g. *"Automated distress call from a Padma SOS device. Location: …"*, then switches to **open mic**.
   7. The location is repeated every T_track (in-call announcement and/or SMS to 112; see OQ-02).
 - **Alternate flows:** wearer cancels in step 3 (UC-05); call fails or drops, so it redials with backoff; no GNSS fix, so UC-10.
 - **Post-conditions:** the operator has heard the context, the location and live audio; the event is logged on the device.

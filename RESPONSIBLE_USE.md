@@ -1,6 +1,6 @@
 # Responsible Use
 
-Padma GPS exists to help people, especially women, **stay safe**. It is designed to be carried and controlled by the person it protects.
+Padma SOS exists to help people, especially women, **stay safe**. It is designed to be carried and controlled by the person it protects.
 
 ## Intended use
 

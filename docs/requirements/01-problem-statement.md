@@ -12,7 +12,7 @@ A woman facing harassment, assault, abduction or a medical emergency in an India
 
 ## Mission
 
-> A small, standalone wearable that **detects an emergency and silently places a VoLTE call to 112**. The call announces that it is an automated Padma GPS distress call and gives the location, then opens the microphone so the operator can hear what is happening and decide what to do. No smartphone is needed.
+> A small, standalone wearable that **detects an emergency and silently places a VoLTE call to 112**. The call announces that it is an automated Padma SOS distress call and gives the location, then opens the microphone so the operator can hear what is happening and decide what to do. No smartphone is needed.
 
 It is also a **tiny, reflashable LTE + GNSS + microphone platform** that others can reprogram for other ways of helping people in need.
 

@@ -31,7 +31,7 @@ Status: `draft`. Values marked **TBD** get fixed once size and battery trade-off
 | ID | Requirement | Pri | Trace |
 |---|---|---|---|
 | FR-020 | On SOS, the device shall **place a VoLTE voice call to 112**. | M | UC-08 |
-| FR-021 | On answer, the device shall **play an automated announcement into the call** stating that it is a Padma GPS distress call, followed by the **location as lat/long and DIGIPIN**, spoken in **English** (OQ-13). | M | UC-07, UC-08 |
+| FR-021 | On answer, the device shall **play an automated announcement into the call** stating that it is a Padma SOS distress call, followed by the **location as lat/long and DIGIPIN**, spoken in **English** (OQ-13). | M | UC-07, UC-08 |
 | FR-022 | After the announcement, the device shall stream the **MEMS microphone audio** into the call, with the downlink muted (nothing played on the device). | M | UC-08 |
 | FR-023 | The device shall **repeat the location** every T_track during the call (in-call announcement and/or SMS to 112; OQ-02). | M | UC-07 |
 | FR-024 | If the call fails or drops, the device shall **redial** with backoff until connected or the battery reserve runs out. | M | UC-08 |
