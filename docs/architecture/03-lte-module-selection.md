@@ -25,9 +25,13 @@ Built-in GNSS is **not** a criterion: AD-04 uses a separate L1 + L5 receiver for
 
 | Module | Chipset | Cat | K1 India bands | K2 VoLTE | K3 Digital audio | K4 Size (mm) | K5 Sleep current | K6 eSIM | Verdict |
 |---|---|---|---|---|---|---|---|---|---|
-| **Quectel EG915U-CN** | UNISOC 8910DM (to confirm) | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 · "China / India" variant | ✅ | ✅ PCM ×1 · analog mic too | 23.6 × 19.9 × 2.4 LGA | 1.2 mA @ PF = 256 · 13 mA idle · 32 µA off | ✅ (eSIM row in spec) | **Lead candidate** |
+| **Quectel EG915U-CN** | UNISOC 8910DM (to confirm) | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 · "China / India" variant | ✅ spec sheet; brochure V8.6 says **"Optional"**, so order the VoLTE build | ✅ PCM ×1 · analog mic too | 23.6 × 19.9 × 2.4 LGA | 1.2 mA @ PF = 256 · 13 mA idle · 32 µA off | ✅ (eSIM row in spec) | **Lead candidate** |
 | SIMCom SIM7672S | Qualcomm QCX216 | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 | ❌ **"NA" for all variants** | ✅ PCM | 24 × 24 × 2.4 LCC+LGA | **0.8 mA @ DRX 0.64 s** · 4.2 mA idle · PSM 3 µA | ⚠ SGP.32 firmware being added | Reject: no VoLTE. Re-check if SIMCom adds it (best sleep current) |
-| Quectel EG800Q-IN | ? | 1 bis | ✅ FDD B1/3/5/8 · TDD B40/41 | ? not listed | ⚠ PCM "in development" | **17.7 × 15.8 × 2.4** LGA (smallest) | 3.9 mA idle · 45 µA CFUN=0 · 1.5 µA off | ? (eSIM note only for EU variant) | **Watch**: best size and power, but no voice today |
+| **Quectel EG810M-CN** | ? | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 · "China / India" variant | ? no VoLTE row in brochure; DTMF and audio playback "Optional" (CN) suggest voice exists | ✅ PCM ×1 | **17.7 × 15.8 × 1.7** LGA (smallest, thinnest) | 1.0 mA LTE sleep · 18.2 mA idle · 17.7 µA off | ? | **Runner-up, if Quectel confirms VoLTE** |
+| Quectel EG800Q-IN | ? | 1 bis | ✅ FDD B1/3/5/8 · TDD B40/41 | ❌ not supported (confirmed by the user; no VoLTE row in brochure V8.6) | ⚠ PCM "in development" | 17.7 × 15.8 × 2.4 LGA | 3.9 mA idle · 45 µA CFUN=0 · 1.5 µA off | ? | Reject: no VoLTE |
+| Quectel EC800UG-CN | ? | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 · "China / India" | ❌ "/" in brochure | ✅ PCM ×1 | 17.7 × 15.8 × 2.4 LCC | ? | ? | Reject: no VoLTE |
+| Quectel EG800K-CN / EG800AK-CN | ? | 1 bis | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 | ? | ❌ no PCM | 17.7 × 15.8 × 2.4 | 0.82 mA LTE-FDD sleep (EG800K) | ? | Reject: no digital audio |
+| Quectel EG915Q | ? | 1 bis | ❌ variants are NA / AF / JP / NAD only | – | ⚠ PCM "in progress" | 23.6 × 19.9 × 2.4 | 130 µA CFUN=4 · 4.55 mA idle | – | Reject: no India variant |
 | SIMCom A7672S | ASR1603 | 1 | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 + GSM | ⚠ reseller claims only | ❌ analog mic / speaker only | 24 × 24 × 2.4 | "TBD" | ⚠ SGP.32 firmware being added | Reject: no digital audio, older platform |
 | Quectel EC200U-CN | UNISOC 8910DM | 1 | ✅ FDD B1/3/5/8 · TDD B34/38/39/40/41 | ? | ⚠ analog; PCM not shown | **31 × 28 × 2.4** | 1.2 mA @ PF = 256 | ? | Reject: too big (same silicon as EG915U) |
 | Cavli C16QS-IN-GNAH | QCX216 class | 1 bis | ✅ B1/3/5/8/40/41 | ? | ⚠ I²S ×1 "requires SDK" | 26.5 × 22.5 × 2.3 | 11 µA hibernate | ✅ integrated eSIM | Reject for now: big, VoLTE not stated. Indian vendor, so keep in view |
@@ -37,8 +41,8 @@ Built-in GNSS is **not** a criterion: AD-04 uses a separate L1 + L5 receiver for
 ## Recommendation
 
 1. **Lead: Quectel EG915U-CN.** It is the only part whose own spec sheet confirms all three gates: India bands (the variant is labelled "China / India"), **VoLTE**, and a **PCM** digital audio port. It also has an analog mic input as a fallback, and an eSIM row. Its weaknesses are size (23.6 × 19.9 mm, about 25 % of the 46 × 39 mm footprint) and a higher idle current than the Qualcomm part. 1.2 mA at PF = 256 still fits the power budget's option (a) estimate (0.8–3.0 mA).
-2. **No runner-up yet.** The SIM7672S looked strong on power (0.8 mA sleep, 3 µA PSM), but its spec sheet lists **VoLTE as "NA" for every variant**. Re-check it if SIMCom adds VoLTE in a later firmware. Finding a second VoLTE-capable part is an open task (see "Not yet evaluated" below).
-3. **Watch: Quectel EG800Q-IN.** 30 % smaller than the EG915U and lower power, but voice and PCM are not released yet. If Quectel ships VoLTE + PCM on the IN variant, it becomes the best fit. The family is pin-compatible across regions, so it could be a v2 drop-in.
+2. **Runner-up candidate: Quectel EG810M-CN.** It has China / India bands and PCM ×1, and at **17.7 × 15.8 × 1.7 mm** it is ~40 % smaller in area and thinner than the EG915U. The brochure lists optional DTMF and audio playback on the CN variant, which hints at voice, but it has **no VoLTE row**. **Ask Quectel.** If VoLTE is confirmed, it may beat the EG915U on size.
+3. **Rejected for missing VoLTE:** the SIM7672 series ("NA" for all variants, including SIM7672G), EG800Q-IN and EC800UG. The SIM7672 has the best sleep current (0.8 mA, 3 µA PSM), so re-check it if SIMCom adds VoLTE.
 
 **Next step:** buy an EVB for the **EG915U-CN** and run the A-04 test from the block diagram first: a VoLTE call on Jio and Airtel in Delhi with PCM audio injected into the uplink and the downlink muted. Use a test number first, then a coordinated 112 test call.
 
@@ -60,11 +64,15 @@ Ask the vendors these before ordering EVBs:
 | Q6 | PSM / eDRX current, and whether Indian operators grant PSM / eDRX to voice SIMs (AD-05) | ask | ask | ask |
 | Q7 | Peak current during a Tx burst (sizes the VBAT bulk capacitance and the battery C-rate) | ask | ask | ask |
 | Q8 | Chipset confirmation (EG915U is believed to be UNISOC 8910DM) | ask | – | ask |
+| Q9 | Which **ordering code** has VoLTE enabled (the brochure marks it "Optional")? | ask | – | – |
+| Q10 | **EG810M-CN: is VoLTE supported**, with PCM in the call? | – | – | – |
 
-Not yet evaluated: Quectel **EG810M** (also listed for China / India), Fibocom and MeiG Cat 1 bis parts, and u-blox **LENA-R8**.
+Not yet evaluated: Fibocom and MeiG Cat 1 bis parts, and u-blox **LENA-R8**.
 
 ## Sources
 
+- Quectel Product Brochure V8.6 and EG915Q Series spec V1.9 (local copies in `hardware/datasheets/Quectel/`, from quectel.com)
+- SIMCom SIM7672G spec (2024-05) (local copy in `hardware/datasheets/SIMCom/`)
 - Quectel EG915U Series spec V1.8: <https://www.quectel.com/blog/document/lte-cat-1-bis-eg915u-series>
 - Quectel EG800Q Series spec V1.9: <https://www.quectel.com.cn/wp-content/uploads/2026/01/Quectel_EG800Q系列_LTE_Standard_模块产品规格书_V1.9.pdf>, product page <https://www.quectel.com/product/lte-eg800q-series/>
 - Quectel EC200U Series spec V1.4: <https://python.quectel.com/en/wp-content/uploads/sites/2/2024/11/Quectel_EC200U_Series_LTE_Standard_Specification_V1.4.pdf>
